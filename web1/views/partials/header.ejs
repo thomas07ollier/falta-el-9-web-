@@ -1,0 +1,25 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Css/Estilos.css">
+</head>
+
+<header class = "container-header">
+
+    
+
+        <div class = "logo">
+          <a href="/"> <img src = "/imagenes/logo.png" alt = "logo" width="100" height="100">
+        </div>
+
+        <h1 class="nombreTienda">Apple</h1></a> 
+
+        <form action="/search" method="GET" class = "search">
+            <input type="text" name="q" placeholder="Buscar productos...">
+            <button type="submit">🔍</button>
+        </form>
+
+        <nav>
+                <a href="/cart">🛒 Carrito (<%= carrito.length %>)</a>
+                <a href="/register">Registrarse</a>
+            </nav>
+</header>

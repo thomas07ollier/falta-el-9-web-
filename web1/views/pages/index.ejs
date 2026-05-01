@@ -1,0 +1,72 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Css/Estilos.css">
+</head>
+
+<body>
+  <div class="container">
+    
+  
+
+    <%- include('../partials/header') %>
+
+
+    <div class = "categorias">
+        <a href="#Iphone">Categoria "iPhone"</a>
+        <a href="#iPad">Categoria "iPad"</a>
+        <a href="#MacBook">Categoria "MacBook"</a>
+    </div>
+
+
+
+
+    <h2 class="categoria-titulo">iPhone</h2>
+<ul class="productos" id="Iphone">
+  <% productos.filter(p => p.categoria === "iPhone").forEach(p => { %>
+    <li>
+      <a href="/products/<%= p.id %>">
+        <img src="<%= p.imagen %>" alt="<%= p.nombre %>">
+        <p><%= p.nombre %></p>
+      </a>
+    </li>
+  <% }) %>
+</ul>
+
+
+
+<h2 class="categoria-titulo">iPad</h2>
+<ul class="productos" id="iPad">
+  <% productos.filter(p => p.categoria === "iPad").forEach(p => { %>
+    <li>
+      <a href="/products/<%= p.id %>">
+        <img src="<%= p.imagen %>" alt="<%= p.nombre %>">
+        <p><%= p.nombre %></p>
+      </a>
+    </li>
+  <% }) %>
+</ul>
+
+
+
+<h2 class="categoria-titulo">MacBook</h2>
+<ul class="productos" id="MacBook">
+  <% productos.filter(p => p.categoria === "MacBook").forEach(p => { %>
+    <li>
+      <a href="/products/<%= p.id %>">
+        <img src="<%= p.imagen %>" alt="<%= p.nombre %>">
+        <p><%= p.nombre %></p>
+      </a>
+    </li>
+  <% }) %>
+</ul>
+
+
+
+
+    
+    
+
+
+
+  </div>
+</body>

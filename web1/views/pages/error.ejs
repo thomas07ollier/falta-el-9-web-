@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Error</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <h1>⚠️ algo salió mal</h1>
+
+  <p><%= mensaje %></p>
+
+  <h2>Te pueden interesar estos productos</h2>
+
+  <div class="productos">
+
+    <% sugeridos.forEach(prod => { %>
+      <div class="card">
+        <h3><%= prod.iphone16 %></h3>
+        <p>$<%= prod.... %></p>
+        <a href="/product/<%= prod.id %>">Ver producto</a>
+      </div>
+    <% }) %>
+
+  </div>
+
+  <br>
+  <a href="/">Volver al inicio</a>
+
+</body>
+</html>

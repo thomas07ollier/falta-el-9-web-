@@ -1,0 +1,47 @@
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Css/Estilos.css">
+</head>
+
+<body>
+  
+
+
+<%- include('../partials/header') %>
+
+
+
+<h1><%= producto.nombre %>"</h1>
+
+<img src="<%= producto.imagen %>" width="300">
+
+<p><%= producto.descripcion %></p>
+
+<h3>$<%= producto.precio %></h3>
+
+<h4>Especificaciones:</h4>
+<ul>
+  <li>Pantalla: <%= producto.especificaciones.pantalla %></li>
+  <li>Procesador: <%= producto.especificaciones.procesador %></li>
+  <li>Cámara: <%= producto.especificaciones.camara %></li>
+  <li>Batería: <%= producto.especificaciones.bateria %></li>
+</ul>
+
+<form action="/cart/add/<%= producto.id %>" method="POST">
+  <button> Agregar al carrito</button>
+</form>
+
+<hr>
+
+<h3>Productos relacionados</h3>
+
+<ul>
+  <% relacionados.forEach(p => { %>
+    <li>
+      <a href="/products/<%= p.id %>"><%= p.nombre %></a>
+    </li>
+  <% }) %>
+</ul>
+
+</body>
